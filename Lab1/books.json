@@ -1,0 +1,3 @@
+{:title=>"a", :author=>"s", :isbn=>"1"}
+{:title=>"z", :author=>"z", :isbn=>"2"}
+{:title=>"m", :author=>"b", :isbn=>"3"}
