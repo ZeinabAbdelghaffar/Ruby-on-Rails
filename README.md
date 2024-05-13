@@ -33,10 +33,10 @@ This Ruby program simulates a bank application where users can process transacti
 - Calls a callback block with the transaction result.
 
 ### Example Output
-2024-05-11T01:00:13+03:00 -- info -- Processing Transactions...
-2024-05-11T01:00:13+03:00 -- info -- User Ali transaction with value -20 succeeded
-2024-05-11T01:00:13+03:00 -- warning -- Ali has 0 balance
-2024-05-11T01:00:13+03:00 -- error -- User Ali transaction with value -100 failed with message Not enough balance
+- 2024-05-11T01:00:13+03:00 -- info -- Processing Transactions...
+- 2024-05-11T01:00:13+03:00 -- info -- User Ali transaction with value -20 succeeded
+- 2024-05-11T01:00:13+03:00 -- warning -- Ali has 0 balance
+- 2024-05-11T01:00:13+03:00 -- error -- User Ali transaction with value -100 failed with message Not enough balance
 
 ### Main Program
 1. Creates instances of User representing bank users.
