@@ -1,0 +1,10 @@
+2024-05-13T06:28:31+03:00 -- info -- Processing Transactions Ali transaction with value -20, Ali transaction with value -30, Ali transaction with value -50, Ali transaction with value -100, Ali transaction with value -100, Menna transaction with value -100
+2024-05-13T06:28:31+03:00 -- error -- User Ali transaction with value -20 failed with message undefined local variable or method `transaction' for main:Object
+2024-05-13T06:29:44+03:00 -- info -- Processing Transactions Malak transaction with value -20, Malak transaction with value -30, Malak transaction with value -50, Malak transaction with value -100, Malak transaction with value -100, Menna transaction with value -100
+2024-05-13T06:29:44+03:00 -- error -- User Malak transaction with value -20 failed with message undefined method `user' for "success":String
+2024-05-13T06:30:40+03:00 -- info -- Processing Transactions Malak transaction with value -20, Malak transaction with value -30, Malak transaction with value -50, Malak transaction with value -100, Malak transaction with value -100, Menna transaction with value -100
+2024-05-13T06:30:40+03:00 -- warning -- Malak has 0 balance
+2024-05-13T06:30:40+03:00 -- error -- User Malak transaction with value -100 failed with message Not enough balance
+2024-05-13T06:32:51+03:00 -- info -- Processing Transactions Malak transaction with value -20, Malak transaction with value -30, Malak transaction with value -50, Malak transaction with value -100, Malak transaction with value -100, Menna transaction with value -100
+2024-05-13T06:32:51+03:00 -- warning -- Malak has 0 balance
+2024-05-13T06:32:51+03:00 -- error -- User Malak transaction with value -100 failed with message Not enough balance
