@@ -98,6 +98,7 @@ After installing Rails, you can create a new Rails application by running the fo
 
 ```bash
 $ rails new blog
+```
 
 - This will create a new directory called blog and generate the necessary files and folders for a Rails application. Here's a basic rundown of the function of each of the files and folders that Rails creates by default:
 
