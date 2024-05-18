@@ -148,3 +148,48 @@ $ rails new blog
 
 ### Summary:
 This lab provides a comprehensive introduction to Ruby on Rails, covering key concepts like MVC architecture, model generation, database interactions, routing, and basic security considerations. By following the steps in this guide, you will have created a functional blog application that demonstrates the core principles of Rails development.
+
+
+## Lab 4: Blog Application with Authentication and Reporting
+
+This lab extends the functionality of the blog application created in Lab 3 to include user authentication, article reporting, and automated tasks using Rake and the Whenever gem.
+
+### Features Implemented:
+
+#### User Authentication:
+- Users can register for a new account.
+- Registered users can log in to the application.
+- using **username** `Zeinab` and **password** `123123123`.
+- User authentication is required for creating, editing, and deleting articles.
+
+#### Article Management:
+- Users can create multiple articles.
+- Articles can be read by all users, but only the author can edit or delete them.
+- Authors can add images to their articles.
+
+#### Reporting Articles:
+- Users can report articles they find inappropriate.
+- The application tracks the number of reports each article receives (`reports_count` column).
+
+#### Article Archiving:
+- Articles with 3 or more reports are automatically archived using a callback.
+
+#### Bonus Tasks:
+- **Rake Task for Removing Articles**: Implemented a Rake task to remove articles with 6 or more reports.
+- **Cronjob with Whenever Gem**: Scheduled the Rake task to run every 5 minutes using the Whenever gem.
+
+#### Output
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/9b347aa4-6c2b-4036-bd40-13884b3e7866)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/3fc2e872-6056-4673-993e-84ed0d9b2a47)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/160b466a-9789-4cb3-9b20-b467a60bb9e4)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/110096b0-bad5-44a9-b890-d016aebc84de)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/6c42e912-bad9-4be9-92e4-a3d750fd93d6)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/422aded8-0b33-4fcc-bda0-9f6d479ad7b8)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/fce357b5-8746-4d85-9746-ccfadd53b502)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/c1c33227-6810-4a0a-91e4-9dd7e5b1bf93)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/3b989b67-8ef3-4f8f-bc2b-e13c49123573)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/2f0ffbf8-d91c-447c-bd9e-c5dc70341c82)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/ae9dc507-39b6-4c93-8183-28c7754a097d)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/7b60cb83-0862-406e-8aed-254299d99132)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/3600c720-6e7e-4b73-be85-fd2c90be9256)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/87519273-90d5-4df4-904c-0c92d5767bbc)
