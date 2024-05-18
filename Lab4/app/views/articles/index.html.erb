@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Articles</h1>
+  <div class="articles-count">
+    Welcome, Zeinab. Your blog currently boasts  <span><%= Article.public_count %></span>  published articles.
+  </div>
+
+  <ol class="articles-list">
+    <% @articles.each do |article| %>
+      <% unless article.archived? %>
+        <li>
+          <%= link_to article.title, article %>
+        </li>
+      <% end %>
+    <% end %>
+  </ol>
+
+  <div class="new-article-link">
+    <%= link_to "Create New Article", new_article_path %>
+  </div>
+</div>

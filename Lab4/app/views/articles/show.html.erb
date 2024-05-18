@@ -1,0 +1,19 @@
+<div class="container">
+  <h1><%= @article.title %></h1>
+
+  <p class="article-body"><%= @article.body %></p>
+
+  <ul class="articles-list">
+    <li>
+      <%= link_to "Edit", edit_article_path(@article), class: "new-article-link" %></li>
+    <li>
+      <%= link_to "Destroy", article_path(@article), method: :delete, class: "new-article-link", "data-turbo-confirm": "Confirm deletion of this article?", "data-turbo-method": "delete" %>
+    </li>
+  </ul>
+
+  <h1>Comments</h1>
+  <%= render @article.comments %>
+
+  <h2>Add a comment:</h2>
+  <%= render 'comments/form', article: @article %>
+</div>

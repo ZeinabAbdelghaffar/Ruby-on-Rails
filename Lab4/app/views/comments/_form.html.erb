@@ -1,0 +1,18 @@
+<%= form_with(model: [ @article, @article.comments.build ], html: { class: "article-form" }) do |form| %>
+  <div class="form-group">
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :body %><br>
+    <%= form.text_area :body, class: "form-control article-body" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :status %><br>
+    <%= form.select :status, Visible::VALID_STATUSES, { selected: @article.status || 'public' }, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.submit "Submit", class: "btn btn-primary" %>
+    <%= link_to "Back to Index", articles_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>  

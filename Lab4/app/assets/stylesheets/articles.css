@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg") center center no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fjalla One', sans-serif; 
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 50px 100px;
+  border: 2px solid black;
+  box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
+  border-radius: 10px;
+}
+
+.articles-count {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.articles-list {
+  padding: 0;
+  text-align: center;
+}
+
+.articles-list li {
+  margin-bottom: 10px;
+}
+
+.articles-list li a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.articles-list li a:hover {
+  text-decoration: underline;
+}
+
+.new-article-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.new-article-link a {
+  text-decoration: none;
+  color: white;
+  background-color: #ffa580;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.new-article-link a:hover {
+  background-color: #ff704d;
+}
+
+.article-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.error-message {
+  color: red;
+}
+
+.btn {
+  background-color: #ffa580;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ff704d;
+}
+
+.btn-secondary {
+  text-decoration: none;
+}
+
+.article-body {
+  font-size: 16px; 
+  line-height: 1.5; 
+  color: #333; 
+  border: 5px solid #ffa580;
+  background-color: #ffa580;
+  margin-bottom: 10px;
+}
+
+span{
+  background-color: #ffa580;
+  border: 5px solid #ffa580;
+  font-weight: bolder;
+  line-height: 2; 
+}
