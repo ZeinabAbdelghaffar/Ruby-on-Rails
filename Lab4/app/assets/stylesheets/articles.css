@@ -34,6 +34,7 @@ h2 {
   border: 2px solid black;
   box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
   border-radius: 10px;
+  width:600px;
 }
 
 .articles-count {
@@ -130,4 +131,17 @@ span{
   border: 5px solid #ffa580;
   font-weight: bolder;
   line-height: 2; 
+}
+
+.article-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.article-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }

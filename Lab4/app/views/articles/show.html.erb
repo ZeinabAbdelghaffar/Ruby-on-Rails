@@ -1,13 +1,20 @@
 <div class="container">
   <h1><%= @article.title %></h1>
 
+  <% if @article.image.attached? %>
+    <div class="article-image">
+      <%= image_tag @article.image, class: "img-fluid" %>
+    </div>
+  <% end %>
+
   <p class="article-body"><%= @article.body %></p>
 
   <ul class="articles-list">
     <li>
-      <%= link_to "Edit", edit_article_path(@article), class: "new-article-link" %></li>
+      <%= link_to "Edit", edit_article_path(@article), class: "new-article-link" %>
+    </li>
     <li>
-      <%= link_to "Destroy", article_path(@article), method: :delete, class: "new-article-link", "data-turbo-confirm": "Confirm deletion of this article?", "data-turbo-method": "delete" %>
+      <%= link_to "Destroy", article_path(@article), method: :delete, class: "new-article-link", data: { turbo_confirm: "Confirm deletion of this article?", turbo_method: "delete" } %>
     </li>
   </ul>
 
