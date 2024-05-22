@@ -150,21 +150,22 @@ $ rails new blog
 This lab provides a comprehensive introduction to Ruby on Rails, covering key concepts like MVC architecture, model generation, database interactions, routing, and basic security considerations. By following the steps in this guide, you will have created a functional blog application that demonstrates the core principles of Rails development.
 
 
-## Lab 4: Blog Application with Authentication and Reporting
+## Lab 4: Blog Application with Authentication, Authorization, and Reporting
 
-This lab extends the functionality of the blog application created in Lab 3 to include user authentication, article reporting, and automated tasks using Rake and the Whenever gem.
+This lab extends the functionality of the blog application created in Lab 3 to include user authentication, authorization, article reporting, and automated tasks using Rake and the Whenever gem.
 
 ### Features Implemented:
 
-#### User Authentication:
+#### User Authentication and Authorization:
 - Users can register for a new account.
-- Registered users can log in to the application.
-- using **username** `Zeinab` and **password** `123123123`.
-- User authentication is required for creating, editing, and deleting articles.
+- Registered users can log in to the application using their credentials.
+- Authentication is managed using the Devise gem.
+- Authorization is implemented to restrict access to creating, editing, and deleting articles only to logged-in users.
+- Admin users have additional privileges, such as managing all articles.
 
 #### Article Management:
 - Users can create multiple articles.
-- Articles can be read by all users, but only the author can edit or delete them.
+- Articles can be read by all users, but only the author or admin can edit or delete them.
 - Authors can add images to their articles.
 
 #### Reporting Articles:
@@ -178,7 +179,18 @@ This lab extends the functionality of the blog application created in Lab 3 to i
 - **Rake Task for Removing Articles**: Implemented a Rake task to remove articles with 6 or more reports.
 - **Cronjob with Whenever Gem**: Scheduled the Rake task to run every 5 minutes using the Whenever gem.
 
+### Authentication and Authorization:
+- User authentication and authorization are managed using the Devise gem.
+- Users can sign up, log in, and log out of the application.
+- Only authenticated users can perform actions such as creating, editing, and deleting articles.
+- Admin users have additional privileges, such as managing all articles.
+
+With the addition of authentication and authorization using the Devise gem, the blog application provides a secure environment for managing articles and user accounts.
+
 #### Output
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/cf9e7d54-5874-480e-889e-13a09b34d89c)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/7062a412-443d-4456-9cd7-7be3bde549b8)
+![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/52753c78-4628-4b9c-91d7-c66858a77f4f)
 ![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/9b347aa4-6c2b-4036-bd40-13884b3e7866)
 ![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/3fc2e872-6056-4673-993e-84ed0d9b2a47)
 ![image](https://github.com/ZeinabAbdelghaffar/Ruby-on-Rails/assets/87963230/160b466a-9789-4cb3-9b20-b467a60bb9e4)
