@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
-  http_basic_authenticate_with name: "Zeinab", password: "123123123", only: :destroy
+  before_action :authenticate_user!, except: [:index, :show]
+  load_and_authorize_resource
 
   def index
     @articles = Article.all
@@ -14,8 +15,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
-
+    @article = current_user.articles.build(article_params)
     if @article.save
       redirect_to @article, notice: 'Article was successfully created.'
     else
@@ -29,7 +29,6 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-
     if @article.update(article_params)
       redirect_to @article, notice: 'Article was successfully updated.'
     else
@@ -39,12 +38,9 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
-    if @article.destroy
-      redirect_to root_path, notice: 'Article was successfully deleted.'
-    else
-      redirect_to root_path, alert: 'Failed to delete the article.'
-    end
-  end  
+    @article.destroy
+    redirect_to articles_url, notice: 'Article was successfully destroyed.'
+  end
 
   private
 

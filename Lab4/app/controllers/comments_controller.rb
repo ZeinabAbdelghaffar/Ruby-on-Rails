@@ -1,11 +1,14 @@
 class CommentsController < ApplicationController
-  http_basic_authenticate_with name: "Zeinab", password: "123123123", only: :destroy
+  before_action :authenticate_user!, except: [:create, :destroy]
+  load_and_authorize_resource
 
   def create
     @article = Article.find(params[:article_id])
-    @comment = @article.comments.create(comment_params)
+    @comment = @article.comments.build(comment_params)
+    @comment.user = current_user
+
     if @comment.save
-      redirect_to article_path(@article)
+      redirect_to article_path(@article), notice: 'Comment was successfully created.'
     else
       render 'articles/show'
     end
@@ -15,7 +18,7 @@ class CommentsController < ApplicationController
     @article = Article.find(params[:article_id])
     @comment = @article.comments.find(params[:id])
     @comment.destroy
-    redirect_to article_path(@article), status: :see_other
+    redirect_to article_path(@article), notice: 'Comment was successfully destroyed.'
   end
 
   private

@@ -1,0 +1,27 @@
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 50px 100px;
+  border: 2px solid black;
+  box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
+  border-radius: 10px;
+  width:600px;
+  text-align: center;
+}
+
+.form-group {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group .form-control {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.form-group .btn {
+  width: 100%;
+  padding: 10px;
+}

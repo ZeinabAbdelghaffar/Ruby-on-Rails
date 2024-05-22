@@ -29,6 +29,10 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 gem "redis", ">= 4.0.1"
 
+#To add authentication and authorization
+gem 'devise'
+gem 'cancancan', '~> 3.0'
+
 # To schedule the execution of a Rake task at regular intervals using the whenever gem (crontab) only for Unix-based systems
 #gem 'whenever', require: false
 
